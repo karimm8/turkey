@@ -1,0 +1,167 @@
+/* variable */
+
+:root{
+    --main-color:#DC0A16;
+    --alter-color:#dc0a14b9;
+    --par-color:#a89a9a;
+    --col-white:#fff;
+    --col-black:#000;
+    --num-pad:40px;
+    --tran:1s ease;
+}
+
+/* variable */
+
+/* start compenent */
+
+.btn{
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--main-color);
+}
+
+.btn:hover{
+    background-color: #dc0a1470;
+}
+
+.para{
+    margin: 20px 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #a89a9a;
+}
+
+/* end compenent */
+
+/* transition */
+
+.tran{
+    transition: var(--tran);
+}
+
+/* transition */
+
+/* box model */
+
+.d-flex{
+    display: flex;
+}
+
+.f-g{
+    gap: 50px;
+}
+
+.f-1{
+    flex: 1;
+}
+
+.f-w{
+    flex-flow: row wrap;
+}
+
+/* box model */
+
+/* color */
+
+.main-color{
+    background-color: var(--main-color);
+}
+
+.bg-white{
+    background-color: var(--col-white);
+}
+
+.col-white{
+    color: var(--col-white);
+}
+
+.col-black{
+    color: var(--col-black);
+}
+
+.col-main{
+    color: var(--main-color);
+}
+
+.gray-color{
+    color: var(--par-color);
+}
+
+/* color */
+
+/* text and font */
+
+.txt-up{
+    text-transform: uppercase;
+}
+
+.txt-cap{
+    text-transform: capitalize;
+}
+
+.txt-c{
+    text-align: center;
+}
+
+.f-w-300{
+    font-weight: 300;
+}
+
+.f-w-500{
+    font-weight: 500;
+}
+
+.f-w-600{
+    font-weight: 700;
+}
+
+.f-s-20{
+    font-size: 2em;
+}
+
+.f-s-15{
+    font-size: 1.5em;
+}
+
+.f-s-30{
+    font-size: 3em;
+}
+
+.w-100{
+    width: 100%;
+}
+
+/* text and font */
+
+/* border */
+
+.rad-5{
+    border-radius: 5px;
+}
+
+.rad-50{
+    border-radius: 50%;
+}
+
+/* border */
+
+/* position */
+
+.p-rel{
+    position: relative;
+}
+
+.hide{
+    overflow: hidden;
+}
+
+/* position */
+
+/* margin and padding */
+
+.pad{
+    padding: 50px;
+}
+
+/* margin and padding */
+

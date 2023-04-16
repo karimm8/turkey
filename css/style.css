@@ -1,0 +1,356 @@
+/* start variable */
+
+:root{
+    --main-color:#dc0a14ea;
+    --alter-color:#dc0a14b9;
+    --text-color:#a89a9a;
+    --trans:1s ease;
+}
+
+/* end variable */
+
+/* start global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+}
+
+input , select{
+    font-family: inherit;
+}
+
+input:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* end global */
+
+/* start header */
+
+.header{
+    position: fixed;
+    min-height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.288);
+    z-index: 33;
+    padding: 0 50px;
+}
+
+.navbar{
+    justify-content: center;
+}
+
+.navbar a{
+    transition: var(--trans);
+}
+
+.navbar a:hover{
+    color: var(--alter-color);
+}
+
+.shop > div{
+    width: 40px;
+    height: 40px;
+}
+
+.gear{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    margin-right: 5px;
+}
+
+.gear:hover , .cart:hover{
+    cursor: pointer;
+}
+
+.gear:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.cart:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+i{
+    line-height: 40px;
+}
+
+/* end header */
+
+/* start landing */
+
+.landing{
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh + 300px);
+    align-items: center;
+}
+
+.landing::before{
+    background-color: rgba(0, 0, 0, 0.726);
+    height: calc(100vh + 300px);
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+}
+
+.text-landing h1{
+    font-size: 5em;
+    width: 80%;
+}
+
+.content-landing{
+    padding: 20px;
+}
+
+.content-landing::before{
+    content: "";
+    height: 6px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.text-form{
+    margin-bottom: 20px;
+}
+
+form > div{
+    margin-bottom: 10px;
+}
+
+.head-form{
+    gap: 20px;
+}
+
+input , select{
+    display: block;
+    background: transparent;
+    border: 2px solid #a89a9a;
+    padding: 7px 0px 5px 15px;
+    margin-top: 5px;
+}
+
+input[type="checkbox"]{
+    display: inline;
+    width: 5%;
+}
+
+.input input{
+    padding-left: 35px;
+}
+
+.input::before{
+    content: "$";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: calc(100% + 30px);
+    top: 5px;
+    background-color: var(--text-color);
+    padding:5px 2px 5px 10px ;
+}
+
+input.submit{
+    border: none;
+}
+
+/* end landing */
+
+/* start static */
+
+p.people{
+    font-size: 1.2em;
+    margin: 20px auto;
+}
+
+/* end static */
+
+/* start about */
+
+.about{
+    align-items: center;
+}
+
+.about img{
+    width: 85%;
+    box-shadow:-5px 0 0 var(--main-color);
+}
+
+.about h2{
+    margin-top: 30px;
+}
+
+/* end about */
+
+/* start causes */
+
+.causes p.cause{
+    max-width: 500px;
+    margin: 20px auto 40px;
+}
+
+.boxes-causes{
+    flex-flow: row wrap;
+    gap: 30px;
+}
+
+.box-causes{
+    flex-basis: 30%;
+    border: 1px solid #eee;
+    transition: .5s ease;
+}
+
+.box-causes:hover{
+   transform: translateY(-2%);
+   top: 0;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.082);
+}
+
+.text-causes{
+    padding: 10px;
+}
+
+.text-causes::before{
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: 70px;
+    background-color:#dc0a14a4;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    opacity: 0;
+}
+
+.text-causes:hover::before{
+    animation: anim1 .5s ease .2s 1 forwards;
+}
+
+@keyframes anim1{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -37%;
+        opacity: 1;
+    }
+}
+
+.text-causes::after{
+    content: "Donate Now";
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.text-causes:hover::after{
+    animation: anim2 .5s ease .2s 1 forwards;
+}
+
+@keyframes anim2{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -30%;
+        opacity: 1;
+    }
+}
+
+.text-progress{
+    color: var(--text-color);
+}
+
+.raised{
+    color: var(--main-color);
+}
+
+.text-progress , .raised{
+    justify-content: space-between;
+}
+
+.progress{
+    height: 8px;
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress span{
+    height: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* end causes */
+
+/* start testimonial */
+
+.testimonial{
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/cta.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+.testimonial::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+.testimonial p{
+    max-width: 650px;
+    margin: 20px auto 0;
+}
+
+/* end testimonial */
+
+/* start footer */
+
+
+/* end footer */
